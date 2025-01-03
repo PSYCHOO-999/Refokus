@@ -1,4 +1,4 @@
-import Marquee from "./marquee";
+import Marquee from "./Marquee";
 
 const Marquees = () => {
   var images = [
@@ -41,7 +41,13 @@ const Marquees = () => {
   ];
   return (
     <div className="py-20 mt-32 w-full relative overflow-hidden">
-        {images.map((items, index) => <Marquee key={index} direction={index === 0? "left" : "right" } imagesurls={items} />)}
+      {images.map((items, index) => (
+        <Marquee
+          key={index}
+          direction={index === 0 ? "left" : "right"}
+          imagesurls={items}
+        />
+      ))}
     </div>
   );
 };
